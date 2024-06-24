@@ -22,8 +22,8 @@
         }
 
       var primeNum = function (arr) {
-          const primes = [];
-          for (let i = 2; i <= arr.length; i++) {
+          var primes = [];
+          for (var i = 2; i <= arr.length; i++) {
             if (checkPrime(i)) {
               primes.push(i);
             }
@@ -34,6 +34,17 @@
 
       var res = primeNum(arr);
       console.log(res);
+
+      (function(arr) {
+        var primes = [];
+          for (var i = 2; i <= arr.length; i++) {
+            if (checkPrime(i)) {
+              primes.push(i);
+            }
+          }
+          console.log(primes);
+      }
+      )(arr);
     </script>
   </body>
 </html>

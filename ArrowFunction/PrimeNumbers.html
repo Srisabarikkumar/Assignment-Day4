@@ -23,8 +23,8 @@
 
       // Arrow function
       var primeNum = (arr) => {
-        const primes = [];
-        for (let i = 2; i <= arr.length; i++) {
+        var primes = [];
+        for (var i = 2; i <= arr.length; i++) {
           if (checkPrime(i)) {
             primes.push(i);
           }
