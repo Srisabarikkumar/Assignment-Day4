@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr1 = [5, 2, 3, 4, 1];
+      var arr2 = [10, 7, 8, 9, 6];
+
+      // Anonymous function
+      var median = function (arr1, arr2) {
+        var medianArr = arr1.concat(arr2);
+        // console.log(medianArr);
+        var sortedArr = medianArr.sort(function (a, b) {
+          return a - b;
+        });
+        // console.log(sortedArr);
+
+        var len = sortedArr.length;
+
+        if (len % 2 == 0) {
+          return (sortedArr[len / 2 - 1] + sortedArr[len / 2]) / 2;
+        } else {
+          return sortedArr[len / 2];
+        }
+
+        // console.log(res);
+      };
+
+      var res = median(arr1, arr2);
+      console.log(res);
+
+      // IIFE function
+      (function (arr1, arr2) {
+        var medianArr = arr1.concat(arr2);
+        var sortedArr = medianArr.sort(function (a, b) {
+          return a - b;
+        });
+
+        var len = sortedArr.length;
+
+        if (len % 2 == 0) {
+          var res = (sortedArr[len / 2 - 1] + sortedArr[len / 2]) / 2;
+        } else {
+          var res = sortedArr[len / 2];
+        }
+
+        console.log(res);
+      })(arr1, arr2);
+    </script>
+  </body>
+</html>

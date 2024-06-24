@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+
+        var k = 2;
+
+        // Anonymous function
+        var rotateArr = function(arr, k) {
+            return arr.slice(k).concat(arr.slice(0,k));
+        }
+
+        var res = rotateArr(arr, k);
+        console.log(res);
+
+        (function(arr, k) {
+            console.log(arr.slice(k).concat(arr.slice(0,k)));
+        }
+        )(arr, k);
+    </script>
+</body>
+</html>

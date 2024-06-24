@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = ["hello", "greet", "world"];
+
+      // Arrow function
+      var titleCaps = (str) => {
+        for (var i = 0; i < str.length; i++) {
+          str[i] = str[i].toLowerCase();
+          str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+        }
+        return str;
+      };
+
+      var res = titleCaps(str);
+      console.log(res);
+    </script>
+  </body>
+</html>
