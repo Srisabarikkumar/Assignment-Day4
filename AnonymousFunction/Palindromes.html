@@ -24,18 +24,6 @@
         var res = palindromeString(strArr);
         console.log(res);
 
-        palindromeArr = [];
-        // IIFE function
-        (function(strArr) {
-            for (var i=0; i<strArr.length; i++) {
-                if(strArr[i] == strArr[i].split("").reverse().join("")){
-                    palindromeArr.push(strArr[i]);
-                }
-            }
-            console.log(palindromeArr);
-        }
-        )(strArr);
-
     </script>
 </body>
 </html>

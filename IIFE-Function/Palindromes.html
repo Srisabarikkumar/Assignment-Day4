@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var strArr = ["madam", "malayalam", "Rohit", "Rahul", "121", "2112"];
+
+        var palindromeArr = [];
+
+        palindromeArr = [];
+        // IIFE function
+        (function(strArr) {
+            for (var i=0; i<strArr.length; i++) {
+                if(strArr[i] == strArr[i].split("").reverse().join("")){
+                    palindromeArr.push(strArr[i]);
+                }
+            }
+            console.log(palindromeArr);
+        }
+        )(strArr);
+    </script>
+</body>
+</html>

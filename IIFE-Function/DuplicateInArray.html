@@ -9,14 +9,6 @@
     <script>
       var arr = [2, 4, 5, 6, 7, 7, 8, 2, 4, 5];
 
-      // Anonymous function
-      var duplicateNum = function (arr) {
-        return arr.filter((item, index) => arr.indexOf(item) == index);
-      };
-
-      var res = duplicateNum(arr);
-      console.log(res);
-
       // IIFE function
       (function (arr) {
         console.log(arr.filter((item, index) => arr.indexOf(item) == index));

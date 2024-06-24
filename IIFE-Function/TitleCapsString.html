@@ -9,28 +9,14 @@
     <script>
       var str = ["hello", "greet", "world"];
 
-      // Anonymous function
-      var titleCaps = function(str) {
-        for (var i=0; i<str.length; i++) {
-          str[i] = str[i].toLowerCase();
-          str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
-        }
-        return str;
-      }
-      
-      var res = titleCaps(str);
-      console.log(res);
-
       // IIFE function
-      (function() {
-        for (var i=0; i<str.length; i++) {
+      (function () {
+        for (var i = 0; i < str.length; i++) {
           str[i] = str[i].toLowerCase();
           str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
         }
         console.log(str);
-      }
-      )(str);
-
+      })(str);
     </script>
   </body>
 </html>
